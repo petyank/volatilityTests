@@ -1,3 +1,5 @@
+import { assert } from "chai";
+
 export default class Utils {
   /**
    * Calculates the percentage difference between two numbers.
@@ -8,6 +10,9 @@ export default class Utils {
   static getPercentDiff = (oldValue, newValue) => {
     //TODO: the current solution only works positive values.
     // Implement a fix to handle both positive and negative values.
-    return Math.abs((oldValue - newValue) / newValue);
+    if (newValue === 0) {
+      throw new Error("The new price cannot be zero");
+    }
+    return ((newValue - oldValue) / Math.abs(oldValue)) * 100;
   };
 }

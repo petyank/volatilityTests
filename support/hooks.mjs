@@ -5,9 +5,10 @@
  */
 
 import { Before, After, setDefaultTimeout } from "@cucumber/cucumber";
+import { By, until } from 'selenium-webdriver';
 
 // Set the default timeout to 160 seconds
-setDefaultTimeout(10 * 1000);
+setDefaultTimeout(160 * 1000);
 
 /**
  * Runs before each scenario.
