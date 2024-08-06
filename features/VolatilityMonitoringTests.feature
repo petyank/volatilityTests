@@ -8,3 +8,5 @@ Feature: BTC-USD prices volatility
         Examples:
             | N | M |
             | 1 | 10 |
+            | 3 | 10 |
+            | 5 | 10 |
